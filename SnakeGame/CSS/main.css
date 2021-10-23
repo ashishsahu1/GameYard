@@ -1,41 +1,139 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
-.body{
-    /* min-height: 100vh; */
-    /* background-image: url(../Images/Checker3.png); */
-    background-size: contain;
-    display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* background-repeat: no-repeat; */
+.body {
+  /* min-height: 100vh; */
+  /* background-image: url(../Images/Checker3.png); */
+  background-size: contain;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* background-repeat: no-repeat; */
 }
 
-.scores{
-    background-color: rgb(0, 132, 255);
-    width: 50vw;
-    display: inline;
+.scores {
+  /* background-color: rgb(0, 132, 255); */
+  background-color: #590056;
+  width: 50vw;
+  display: inline;
 }
 
-#board{
-    height: 100vh;
-    width: 100vw;
-    background-color: #20003B;
-    display: grid;
-    grid-template-rows: repeat(18,1fr);
-    grid-template-columns: repeat(18,1fr);
+#board {
+  height: 100vh;
+  width: 100vw;
+  background-color: #20003b;
+  display: grid;
+  color: aqua;
+  grid-template-rows: repeat(18, 1fr);
+  grid-template-columns: repeat(18, 1fr);
 }
 
-.head{
-    background-color: rgb(255, 230, 0);
+.tit {
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 100px;
+  text-align: center;
 }
 
-.snake{
-    background-color: aquamarine;
+.tit .t1 {
+  color: #00e672;
+  font-weight: 900;
+  font-size: 100px;
+  margin: 0;
+  padding: 0;
+  text-shadow: 5px 0 0 rgb(0, 0, 0), -5px 0 0 rgb(0, 0, 0), 0 5px 0 rgb(0, 0, 0),
+    0 -5px 0 rgb(0, 0, 0), 4px 4px rgb(0, 0, 0), -4px -4px 0 rgb(0, 0, 0),
+    4px -4px 0 rgb(0, 0, 0), -4px 4px 0 rgb(0, 0, 0);
 }
 
-.food{
-    background-color: aliceblue;
+.tit .t2 {
+  margin: 0;
+  color: yellow;
+  font-weight: 900;
+  font-size: 130px;
+  padding: 0;
+  text-shadow: 5px 0 0 rgb(0, 0, 0), -5px 0 0 rgb(0, 0, 0), 0 5px 0 rgb(0, 0, 0),
+    0 -5px 0 rgb(0, 0, 0), 4px 4px rgb(0, 0, 0), -4px -4px 0 rgb(0, 0, 0),
+    4px -4px 0 rgb(0, 0, 0), -4px 4px 0 rgb(0, 0, 0);
+}
+
+#scoreBox {
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  position: absolute;
+  left: 100px;
+  top: 500px;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+}
+
+#hiscoreBox {
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  position: absolute;
+  left: 100px;
+  top: 550px;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+}
+
+.head {
+  background-color: #00e672;
+  border-radius: 100px;
+  border-color: rgb(255, 255, 255);
+  border-width: 5px;
+  transform: scale(1.5);
+  z-index: 1;
+}
+
+.snake1 {
+  background-color: #00e672;
+  border-radius: 100px;
+  margin: 0;
+  padding: 0;
+  transform: scale(1.2);
+}
+
+.snake2 {
+  background-color: #00a365;
+  border-radius: 100px;
+  margin: 0;
+  padding: 0;
+  transform: scale(1.2);
+}
+
+.tail {
+  background-color: #00e672;
+  border-radius: 60px 60px 60px 60px;
+  margin: 0;
+  padding: 0;
+  transform: scale(0.8);
+}
+
+.food {
+  background-color: #FF2E3E;
+    border-radius: 100px;
+    animation: blink 5s linear infinite;
+}
+
+/* @keyframes blink{
+  0%{opacity: .6;}
+  50%{opacity: .9;}
+  100%{opacity: 1;}
+} */
+
+@keyframes blink {
+    0%{
+        transform: scale(0.7);
+    }
+    5%{
+        transform: scale(2);
+    }
+    6%{
+        transform: scale(0.7);   
+    }    
 }
