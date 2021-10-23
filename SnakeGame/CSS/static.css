@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.bod {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #590056;
+}
+
+.tit {
+  margin: 30px;
+  text-align: center;
+}
+
+.tit p {
+  display: inline;
+  font-size: 150px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.tit p:nth-child(1) {
+  color: #00e672;
+  font-weight: 900;
+  font-size: 120px;
+  text-shadow: 10px 0 0 rgb(0, 0, 0), -10px 0 0 rgb(0, 0, 0),
+    0 10px 0 rgb(0, 0, 0), 0 -10px 0 rgb(0, 0, 0), 9px 9px rgb(0, 0, 0),
+    -9px -9px 0 rgb(0, 0, 0), 9px -9px 0 rgb(0, 0, 0), -9px 9px 0 rgb(0, 0, 0);
+}
+
+.tit p:nth-child(2) {
+  color: yellow;
+  font-weight: 900;
+  font-size: 150px;
+  text-shadow: 10px 0 0 rgb(0, 0, 0), -10px 0 0 rgb(0, 0, 0),
+    0 10px 0 rgb(0, 0, 0), 0 -10px 0 rgb(0, 0, 0), 9px 9px rgb(0, 0, 0),
+    -9px -9px 0 rgb(0, 0, 0), 9px -9px 0 rgb(0, 0, 0), -9px 9px 0 rgb(0, 0, 0);
+}
+
+.bod .play {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  border-radius: 50px;
+  text-align: center;
+  margin: 30px;
+  font-size: 15vw;
+  width: 50%;
+  height: 30%;
+  border: 15px solid black;
+}
+
+#butt {
+  position: relative;
+  width: 50%;
+  height: 30%;
+  background: #FEA101;
+  border-radius: 50% / 10%;
+  color: black;
+  text-align: center;
+  text-indent: 0.1em;
+}
+
+#butt:before {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: -5%;
+  left: -5%;
+  background: inherit;
+  border-radius: 5% / 50%;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    color: black;
+    font-weight: 800;
+
+}
+
+a{
+    color: black;
+}
+
+#butt:hover{
+    background-color: #fec301;
+}
